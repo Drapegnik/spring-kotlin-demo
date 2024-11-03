@@ -1,4 +1,3 @@
-.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -37,3 +36,9 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+### Gradle ###
+.gradle
+/gradle/
+/gradlew
+/gradlew.bat
