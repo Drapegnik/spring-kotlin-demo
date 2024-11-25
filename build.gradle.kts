@@ -4,7 +4,6 @@ plugins {
     id("org.springframework.boot") version "3.3.5"
     id("io.spring.dependency-management") version "1.1.6"
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
-    id("com.diffplug.spotless") version "6.24.0"
 }
 
 group = "com.drapegnik"
@@ -60,14 +59,4 @@ ktlint {
     enableExperimentalRules.set(true)
     outputToConsole.set(true)
     ignoreFailures.set(false)
-}
-
-spotless {
-    kotlin {
-        target("**/*.kt")
-    }
-    kotlinGradle {
-        target("*.gradle.kts")
-        ktlint()
-    }
 }

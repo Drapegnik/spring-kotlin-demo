@@ -13,5 +13,4 @@ lintCheck:
 
 .PHONY: lintFormat
 lintFormat:
-	#./gradlew ktlintFormat
-	./gradlew spotlessApply
+	./gradlew ktlintFormat

@@ -5,7 +5,9 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
 @Component
-class CLRunner(private val roomRepository: RoomRepository) : CommandLineRunner {
+class CLRunner(
+    private val roomRepository: RoomRepository,
+) : CommandLineRunner {
     override fun run(vararg args: String?) {
         println("Hello, world!")
 
