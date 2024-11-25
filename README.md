@@ -8,6 +8,8 @@ make build
 make run
 ```
 
+Then open http://localhost:8080/h2-console to access the H2 database.
+
 ```bash
 make lintCheck
 make lintFormat
