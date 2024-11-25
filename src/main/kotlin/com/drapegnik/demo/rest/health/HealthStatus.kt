@@ -1,4 +1,6 @@
 package com.drapegnik.demo.rest.health
 
-data class HealthStatus(val id: Int, val status: String) {
-}
+data class HealthStatus(
+    val id: Int,
+    val status: String,
+)

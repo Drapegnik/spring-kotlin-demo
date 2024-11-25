@@ -8,6 +8,11 @@ make build
 make run
 ```
 
+```bash
+make lintCheck
+make lintFormat
+```
+
 ### Reference Documentation
 
 For further reference, please consider the following sections:
