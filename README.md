@@ -1,5 +1,11 @@
 # spring-kotlin-demo
 
+> My first [Spring Boot](https://spring.io/projects/spring-boot) project with [Kotlin](https://kotlinlang.org/)
+
+> Generated with [Spring Initializr](https://start.spring.io/)
+
+> Inspired by the course [Learning Spring 6 with Spring Boot 3](https://www.linkedin.com/learning/learning-spring-6-with-spring-boot-3)
+
 ## Getting Started
 
 ### Scripts
