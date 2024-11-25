@@ -36,3 +36,11 @@ kotlin {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.register("showEnv") {
+	doLast {
+		println("\nJava version:\t${System.getProperty("java.version")}")
+		val kotlinVersion = org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java.`package`.implementationVersion
+		println("Kotlin version:\t$kotlinVersion")
+	}
+}
