@@ -1,22 +1,27 @@
-CREATE TABLE IF NOT EXISTS rooms (
+DROP INDEX IF EXISTS idx_res_date;
+DROP TABLE IF EXISTS reservations;
+DROP TABLE IF EXISTS guests;
+DROP TABLE IF EXISTS rooms;
+
+CREATE TABLE rooms (
     room_id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(16) NOT NULL,
-    room_number VARCHAR(16) NOT NULL UNIQUE,
-    bed_info VARCHAR(16) NOT NULL
+    name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255) NOT NULL UNIQUE,
+    bed_info VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS guests (
+CREATE TABLE guests (
     guest_id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(16) NOT NULL,
-    last_name VARCHAR(16) NOT NULL,
-    email VARCHAR(32) NOT NULL,
-    address VARCHAR(32),
-    country VARCHAR(16),
-    state VARCHAR(16),
-    phone_number VARCHAR(24)
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    country VARCHAR(255),
+    state VARCHAR(255),
+    phone_number VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS reservations (
+CREATE TABLE reservations (
     reservation_id BIGINT PRIMARY KEY AUTO_INCREMENT,
     room_id BIGINT NOT NULL,
     guest_id BIGINT NOT NULL,
