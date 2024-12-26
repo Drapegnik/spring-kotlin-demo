@@ -3,6 +3,7 @@ package com.drapegnik.demo
 import com.drapegnik.demo.data.repository.GuestRepository
 import com.drapegnik.demo.data.repository.ReservationRepository
 import com.drapegnik.demo.data.repository.RoomRepository
+import com.drapegnik.demo.service.RoomReservationService
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
@@ -11,6 +12,7 @@ class CLRunner(
     private val roomRepository: RoomRepository,
     private val guestRepository: GuestRepository,
     private val reservationRepository: ReservationRepository,
+    private val roomReservationService: RoomReservationService,
 ) : CommandLineRunner {
     override fun run(vararg args: String?) {
         println("Hello, Kotlin!")
@@ -32,5 +34,11 @@ class CLRunner(
 
         val reservation = reservationRepository.findAllByReservationDate(java.sql.Date.valueOf("2024-11-28"))
         println("\nFound reservation on 28.11: $reservation")
+
+        val reservationsByDate = roomReservationService.getRoomReservationsForDate("2024-11-28")
+        println("\n*** RESERVATIONS BY DATE ***")
+        reservationsByDate.forEach { println(it) }
+
+        roomReservationService.getRoomReservationsForDate("2024/11/28")
     }
 }
