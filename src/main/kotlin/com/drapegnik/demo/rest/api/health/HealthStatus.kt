@@ -1,4 +1,4 @@
-package com.drapegnik.demo.rest.health
+package com.drapegnik.demo.rest.api.health
 
 data class HealthStatus(
     val id: Int,

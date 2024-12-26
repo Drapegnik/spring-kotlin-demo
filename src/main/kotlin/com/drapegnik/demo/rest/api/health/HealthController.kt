@@ -1,4 +1,4 @@
-package com.drapegnik.demo.rest.health
+package com.drapegnik.demo.rest.api.health
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
