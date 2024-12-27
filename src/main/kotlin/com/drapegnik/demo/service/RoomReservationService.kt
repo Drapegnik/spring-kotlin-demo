@@ -12,13 +12,12 @@ class RoomReservationService(
     private var roomRepository: RoomRepository,
     private var reservationRepository: ReservationRepository,
 ) {
-    fun getRoomReservationsForDate(reservationDate: String): List<RoomReservation> {
+    fun getRoomReservationsForDate(reservationDate: String): List<RoomReservation>? {
         val date: java.sql.Date
         try {
             date = java.sql.Date.valueOf(reservationDate)
         } catch (e: Exception) {
-            println("Invalid date format: $reservationDate")
-            return emptyList()
+            return null
         }
         val roomReservationsMap = mutableMapOf<Long, RoomReservation>()
 

@@ -37,8 +37,11 @@ class CLRunner(
 
         val reservationsByDate = roomReservationService.getRoomReservationsForDate("2024-11-28")
         println("\n*** RESERVATIONS BY DATE ***")
-        reservationsByDate.forEach { println(it) }
+        reservationsByDate?.forEach { println(it) }
 
-        roomReservationService.getRoomReservationsForDate("2024/11/28")
+        val date = "2024/11/28"
+        if (roomReservationService.getRoomReservationsForDate(date) == null) {
+            println("\nInvalid date: $date")
+        }
     }
 }
