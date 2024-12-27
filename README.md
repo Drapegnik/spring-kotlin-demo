@@ -6,6 +6,12 @@
 
 > Inspired by the course [Learning Spring 6 with Spring Boot 3](https://www.linkedin.com/learning/learning-spring-6-with-spring-boot-3)
 
+## Demo
+
+<img width="1152" alt="get-rooms-200" src="https://github.com/user-attachments/assets/47efe9f9-fc69-4648-8aef-08b940b09e3d" />
+<img width="1152" alt="get-reservations-400" src="https://github.com/user-attachments/assets/5fd3f351-e7cd-4077-ac68-2172a747b889" />
+<img width="1152" alt="get-reservations-200" src="https://github.com/user-attachments/assets/666b7522-4a39-48f3-ac2d-a875cc2a00ff" />
+
 ## Getting Started
 
 ### Scripts
